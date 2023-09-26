@@ -1,27 +1,36 @@
+$color-grey: #777
+$color-brown-light: #BA8554
+$color-brown-dark: #A14F03
+$color-white: #FFF
+$color-white-l-gray: #FAFAFA
+$color-black: #000
+
+$box-shadow: (0rem .4rem .4rem 0rem rgba(0, 0, 0, 0.05))
+
 *, ::after, ::before
   margin: 0
   padding: 0
   box-sizing: border-box
 
 html
-  font-size: 62.5
+  font-size: 62.5%
 
 body
   font-family: Roboto, sans-serif
   font-weight: 400
-  color: #777
+  color: $color-grey
   font-size: 1.6rem
   letter-spacing: .2rem
   padding: 5rem
   background-color: white
 
 .container
-  background-color: #f7f7f7
+  background-color: $color-white-l-gray
 
 .header
   position: relative
   height: 95vh
-  background: linear-gradient(90deg, rgba(186, 133, 84, 0.70) 0.03%, rgba(1, 1, 1, 0.70) 99.94%),  url(../images/header-background.jpg) center / cover no-repeat
+  background: linear-gradient(90deg, rgba($color-brown-light, 0.70) 0.03%, rgba($color-black, 0.70) 99.94%),  url(../images/header-background.jpg) center / cover no-repeat
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%)
   //clip-path: polygon(75% 0, 100% 50%, 75% 100%, 75% 80%, 0 80%, 0 20%, 75% 20%)
   &__logo
@@ -39,7 +48,7 @@ body
     text-align: center
 
 .title-first
-  color: #FFF
+  color: $color-white
 
   &__main
     display: block
@@ -71,7 +80,7 @@ body
   &:link, &:visited
     text-transform: uppercase
     text-decoration: none
-    color: #777
+    color: $color-grey
     padding: 1.5rem 4rem
     background: white
     border-radius: 5rem
@@ -81,7 +90,7 @@ body
     font-size: 2rem
   &:hover
     transform: translateY(-.3rem)
-    box-shadow: (0rem .4rem .4rem 0rem rgba(0, 0, 0, 0.05))
+    box-shadow: $box-shadow
     &::after
       transform: scale(1.05)
 
@@ -130,5 +139,6 @@ body
   100%
     opacity: 1
     transform: translateX(0rem)
+
 
 
